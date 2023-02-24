@@ -5,14 +5,14 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.Scanner;
 
-public class Model {
+public class Server {
     ServerSocket server;
     Socket client;
 
     PrintWriter out;
     BufferedReader in;
 
-    public Model(int port) {
+    public Server(int port) {
         try {
             server = new ServerSocket(port);
         } catch (IOException e) {
@@ -53,7 +53,7 @@ public class Model {
     }
 
     public static void main(String[] args) throws InterruptedException {
-        Model s = new Model(1234);
+        Server s = new Server(1234);
         s.acceptClient();
         s.getStreams();
         ListenerThread l = new ListenerThread(s.in, System.out);

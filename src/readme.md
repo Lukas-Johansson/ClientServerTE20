@@ -11,3 +11,6 @@ Idag så har jag arbetat vidare på viewn och försöekr ta mig igenom trasslet 
 
 ##23-02-2023
 Fixat Viewn och börjart förstå hur man får servern och clienten att börjar prata och fungera
+
+##24-02-2023
+Gjort praktiskt klart viewn för server och försöka börajt få den att fungera för att kunna köra den utan previewn.

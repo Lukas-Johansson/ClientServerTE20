@@ -7,13 +7,13 @@ import java.io.PrintWriter;
 import java.net.Socket;
 import java.util.Scanner;
 
-public class Model {
+public class Client {
     Socket socket;
 
     PrintWriter out;
     BufferedReader in;
 
-    public Model(String ip, int port) {
+    public Client(String ip, int port) {
         try {
             socket = new Socket(ip,port);
         } catch (IOException e) {
@@ -44,7 +44,7 @@ public class Model {
     }
 
     public static void main(String[] args) throws InterruptedException {
-        Model me = new Model("10.70.45.159", 1234);
+        Client me = new Client("172.17.240.1", 1234);
         me.getStreams();
         ListenerThread l = new ListenerThread(me.in, System.out);
         Thread listener = new Thread(l);
