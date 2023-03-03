@@ -19,7 +19,7 @@ public class Server {
             System.err.println("Failed to open serversocket.");
             e.printStackTrace();
         }
-        System.out.println("Server started...");
+        System.out.println("StarterStuff.Server started...");
     }
 
     private void acceptClient() {
@@ -53,10 +53,10 @@ public class Server {
     }
 
     public static void main(String[] args) throws InterruptedException {
-        Server s = new Server(1234);
+        Server s = new Server(8001);
         s.acceptClient();
         s.getStreams();
-        ListenerThread l = new ListenerThread(s.in, System.out);
+        ClientListenerThread l = new ClientListenerThread(s.in, System.out);
         Thread listener = new Thread(l);
         listener.start();
         s.runProtocol();

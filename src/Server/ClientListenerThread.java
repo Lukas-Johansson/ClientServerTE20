@@ -3,12 +3,13 @@ package Server;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.PrintStream;
+import java.io.PrintWriter;
 
-public class ListenerThread implements Runnable{
+public class ClientListenerThread implements Runnable{
     private BufferedReader in;
     private PrintStream out;
 
-    public ListenerThread(BufferedReader in, PrintStream out) {
+    public ClientListenerThread(BufferedReader in, PrintStream out) {
         this.in = in;
         this.out = out;
     }

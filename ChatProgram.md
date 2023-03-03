@@ -5,9 +5,9 @@ de andra programmen ni arbetat med under kursen. Genom att använda MVC kan vi a
 typer av nätverksprogram. Byt view till ett schackbräde och bygg ut modellen till att hantera schackdrag så har ni ett online schack.  
 
 ## Grundkrav
-De två programmen ska ha en tydligt uppdelad struktur där Client.View (GUIt) ska vara ett enkelt Swingfönster med de komponenter 
+De två programmen ska ha en tydligt uppdelad struktur där Client.ClientView (GUIt) ska vara ett enkelt Swingfönster med de komponenter 
 och funktioner som behövs för att lösa uppgiften. I Modellen ska all kod som gör något finnas. Viktigt är att allt som har 
-med Sockets och BufferedReader/PrintWriter finns här. Controllerns uppgift är att sköta kommunikationen mellan Client.View och Client.Client.
+med Sockets och BufferedReader/PrintWriter finns här. Controllerns uppgift är att sköta kommunikationen mellan Client.ClientView och Client.Client.
 
 Ditt program ska kunna göra
 * Ansluta en klient till en server
@@ -19,7 +19,7 @@ Det måste finnas ett sätt att ange ip och port för klienten innan socketen sk
 ifrån. Från guit eller ska det anges innan model och view skapas. 
 
 Eftersom inkommande trafik landar i Client.Client finns det inget naturligt sätt för controllern att veta när det är dags att hämta 
-information från modellen och presentera den i Client.View. Finns det en renderingsloop som i game-of-life är detta inget problem men 
+information från modellen och presentera den i Client.ClientView. Finns det en renderingsloop som i game-of-life är detta inget problem men 
 annars kan ni böja lite på reglerna och tillåta att modellen talar om för kontrollern att det finns ny information.
 
 Eftersom server och klient eventuellt gör olika saker behöver ni fundera på om det behövs olika versioner av tråden som 

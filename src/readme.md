@@ -14,3 +14,6 @@ Fixat Viewn och börjart förstå hur man får servern och clienten att börjar 
 
 ##24-02-2023
 Gjort praktiskt klart viewn för server och försöka börajt få den att fungera för att kunna köra den utan previewn.
+
+##03-03-2023
+Verkar ha fått vissa saker att fungera viewn är det enda som verkligen inte funkar lite drygt men ska försöka att fixa den
